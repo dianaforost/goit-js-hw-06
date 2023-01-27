@@ -17,6 +17,6 @@ galleryList.style.display = "flex";
 galleryList.style.gap = "30px";
 galleryList.style.listStyle = "none";
 const makeGalleryMarkup = images.map(
-  (images) => `<li class="item"><img src="${images.url} alt="${images.alt}" width="320"></li>`
+  ({url,alt}) => `<li class="item"><img src="${url} alt="${alt}" width="320"></li>`
 ).join("");
 galleryList.insertAdjacentHTML("afterbegin", makeGalleryMarkup);
